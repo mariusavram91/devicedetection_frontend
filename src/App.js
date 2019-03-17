@@ -10,7 +10,7 @@ class App extends Component {
   }
 
   detectDevice() {
-    fetch('http://localhost:8000/api/device_info')
+    fetch('http://localhost:8080/api/device_info')
       .then(results=>results.json())
       .then(info=>this.setState({info}));
   }
