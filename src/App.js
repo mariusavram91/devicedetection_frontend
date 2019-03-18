@@ -29,12 +29,12 @@ class App extends Component {
 
     return (
       <div className="App">
-        <h1>Device Detector</h1>
+        <h1 className="App__title">Device Detector</h1>
 
-        <div className="App__action">
+        <div>
           <p>Click to check what type of device and what OS you are using.</p>
-          <button className="App__action__btn" type="button" onClick={this.detectDevice}>
-            <span>Detect Device</span>
+          <button type="button" onClick={this.detectDevice}>
+            Detect Device
           </button>
         </div>
 

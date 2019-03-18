@@ -7,41 +7,16 @@ exports[`App renders correctly 1`] = `
   <h1>
     Device Detector
   </h1>
-  <div
-    className="App__action"
-  >
+  <div>
     <p>
       Click to check what type of device and what OS you are using.
     </p>
     <button
-      className="App__action__button"
       onClick={[Function]}
       type="button"
     >
-      <span>
-        Detect Device
-      </span>
+      Detect Device
     </button>
-  </div>
-  <div
-    className="Info"
-  >
-    <table>
-      <tbody>
-        <tr>
-          <th>
-            Type of device
-          </th>
-          <th>
-            Device OS
-          </th>
-        </tr>
-        <tr>
-          <td />
-          <td />
-        </tr>
-      </tbody>
-    </table>
   </div>
 </div>
 `;
