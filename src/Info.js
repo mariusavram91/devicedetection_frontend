@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 
+import './App.css';
+
 class Info extends Component {
   render() {
       return(
-        <div className="info">
+        <div className="Info">
             <table>
               <tbody>
                 <tr>

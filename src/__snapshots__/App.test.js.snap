@@ -1,22 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly 1`] = `
+exports[`App renders correctly 1`] = `
 <div
   className="App"
 >
-  <div
-    className="header"
-  >
+  <h1>
     Device Detector
-  </div>
+  </h1>
   <div
-    className="action"
+    className="App__action"
   >
     <p>
       Click to check what type of device and what OS you are using.
     </p>
     <button
-      className="btn"
+      className="App__action__button"
       onClick={[Function]}
       type="button"
     >
@@ -26,7 +24,7 @@ exports[`renders correctly 1`] = `
     </button>
   </div>
   <div
-    className="info"
+    className="Info"
   >
     <table>
       <tbody>

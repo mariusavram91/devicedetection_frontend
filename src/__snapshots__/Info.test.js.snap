@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Info renders correctly 1`] = `
+<div
+  className="Info"
+>
+  <table>
+    <tbody>
+      <tr>
+        <th>
+          Type of device
+        </th>
+        <th>
+          Device OS
+        </th>
+      </tr>
+      <tr>
+        <td>
+          smartphone
+        </td>
+        <td>
+          iOS
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;

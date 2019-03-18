@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 import Info from './Info.js';
 import './App.css';
 
@@ -12,6 +13,7 @@ class App extends Component {
 
   detectDevice() {
     const endpoint = process.env.REACT_APP_API_URL + '/device_info';
+
     fetch(endpoint)
       .then(results=>results.json())
       .then(info=>this.setState({info}))
@@ -20,17 +22,18 @@ class App extends Component {
 
   render() {
     let info = <Info info={this.state.info}/>;
+
     if (this.state.error) {
-      info = <p className="error">Error: {this.state.error.message}</p>
+      info = <p className="App__error">Error: {this.state.error.message}</p>
     }
 
     return (
       <div className="App">
-        <div className="header">Device Detector</div>
+        <h1>Device Detector</h1>
 
-        <div className="action">
+        <div className="App__action">
             <p>Click to check what type of device and what OS you are using.</p>
-            <button className="btn" type="button" onClick={this.detectDevice}>
+            <button className="App__action__btn" type="button" onClick={this.detectDevice}>
                 <span>Detect Device</span>
             </button>
         </div>

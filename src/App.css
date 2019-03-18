@@ -6,19 +6,15 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: 23px;
   color: white;
 }
 
-.App div {
-  margin: 16px;
+.App h1 {
+  font-size: 30px;
 }
 
-.App .header {
-  font-size: calc(16px + 2vmin);
-}
-
-.btn {
+.App .App__action__btn {
   position: relative;
   display: block;
   margin: 30px auto;
@@ -33,26 +29,20 @@
   transition: background-color .3s;
 }
 
-.btn:hover, .btn:focus {
+.App .App__action__btn:hover, .App .App__action__btn:focus {
   background-color: #27ae60;
 }
 
-.btn > * {
+.App .App__action__btn > * {
   position: relative;
 }
 
-.btn span {
-  font-size: calc(6px + 2vmin);
+.App .App__action__btn span {
+  font-size: 20px;
   display: block;
   padding: 12px 24px;
 }
 
-.error {
+.App .App__error {
   color: #f44336;
-}
-
-table {
-  font-size: calc(8px + 2vmin);
-  margin-left:auto;
-  margin-right:auto;
 }
