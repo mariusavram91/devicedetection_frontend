@@ -7,12 +7,16 @@ class App extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {info: [], error: null};
+    this.state = {
+      info: null,
+      error: null
+    };
+
     this.detectDevice = this.detectDevice.bind(this);
   }
 
   detectDevice() {
-    const endpoint = process.env.REACT_APP_API_URL + '/device_info';
+    const endpoint = `${process.env.REACT_APP_API_URL}/device_info`;
 
     fetch(endpoint)
       .then(results=>results.json())
@@ -21,24 +25,22 @@ class App extends Component {
   }
 
   render() {
-    let info = <Info info={this.state.info}/>;
-
-    if (this.state.error) {
-      info = <p className="App__error">Error: {this.state.error.message}</p>
-    }
+    const {info, error } = this.state;
 
     return (
       <div className="App">
         <h1>Device Detector</h1>
 
         <div className="App__action">
-            <p>Click to check what type of device and what OS you are using.</p>
-            <button className="App__action__btn" type="button" onClick={this.detectDevice}>
-                <span>Detect Device</span>
-            </button>
+          <p>Click to check what type of device and what OS you are using.</p>
+          <button className="App__action__btn" type="button" onClick={this.detectDevice}>
+            <span>Detect Device</span>
+          </button>
         </div>
 
-        {info}
+        {error && <p className="App__error">Error: {error.message}</p>}
+
+        {info && <Info info={info} />}
       </div>
     );
   }

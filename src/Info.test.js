@@ -7,7 +7,7 @@ import Info from './Info';
 describe('Info', () => {
   it('renders correctly', () => {
     const tree = renderer.create(
-          <Info info={{ type: 'smartphone', os: 'iOS'}} />
+      <Info info={{ type: 'smartphone', os: 'iOS'}} />
     ).toJSON();
 
     expect(tree).toMatchSnapshot();
