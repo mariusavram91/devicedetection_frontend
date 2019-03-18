@@ -1,0 +1,20 @@
+version: '2'
+services:
+  backend:
+    build:
+      context: ../api
+      dockerfile: ./docker/Dockerfile
+    restart: always
+    ports:
+     - "8080:80"
+    env_file:
+      - ../api/.env
+
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    env_file:
+      - .env

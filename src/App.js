@@ -10,7 +10,9 @@ class App extends Component {
   }
 
   detectDevice() {
-    fetch('http://localhost:8080/api/device_info')
+    console.log(process.env);
+    var endpoint = process.env.REACT_APP_API_URL + '/device_info';
+    fetch(endpoint)
       .then(results=>results.json())
       .then(info=>this.setState({info}));
   }
