@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="App"
+>
+  <div
+    className="header"
+  >
+    Device Detector
+  </div>
+  <div
+    className="action"
+  >
+    <p>
+      Click to check what type of device and what OS you are using.
+    </p>
+    <button
+      className="btn"
+      onClick={[Function]}
+      type="button"
+    >
+      <span>
+        Detect Device
+      </span>
+    </button>
+  </div>
+  <div
+    className="info"
+  >
+    <table>
+      <tbody>
+        <tr>
+          <th>
+            Type of device
+          </th>
+          <th>
+            Device OS
+          </th>
+        </tr>
+        <tr>
+          <td />
+          <td />
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;
